@@ -1,0 +1,207 @@
+body {
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+/* Using H1, H3, P etc. we was able to change specific aspects of each indivual area
+without having to directly change classes */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat";
+  font-weight: 700;
+}
+
+p {
+  color: #8f8f8f;
+}
+
+/* Headings */
+
+.big-heading {
+  font-family: "Montserrat";
+  font-size: 3.5rem;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+.section-heading {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+/* Containers */
+
+.container-fluid {
+  padding: 7% 15%;
+}
+
+/* Sections */
+
+.colored-section {
+  background-color: #ff4c68;
+  color: #fff;
+}
+
+.white-section {
+  background-color: #fff;
+}
+
+/* Navigation bar */
+/* Padding was added to the nav bar to the bottom to allow a nice gap for the H1 and the nav bar */
+.navbar {
+  padding: 0 0 4.5rem;
+}
+
+/* Adding branding to the Icon */
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-family: "Ubuntu";
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Dl Buttons */
+.download-button {
+  margin: 5% 3% 5% 0;
+}
+
+/* We gave the top half of the website a background color and also gave the assets matching
+color for the entire top half instead of doing them individually */
+
+/* Title section */
+
+
+/* Here we added a combining sector to show that the container fluid had a basic value of 7% 15% but within
+the title specific ID we needed this to be seperate without being WET (We enjoy typing) Always remember
+heirarchy value
+
+No space = Left to right
+Space = right to left*/
+
+#title .container-fluid {
+  text-align: left;
+  padding: 3% 15%;
+
+}
+
+/* Title image */
+/* We added a position absolute here so we could give it a z-index, however - we removed the z-index
+as if we refer to the flow chart, because neither of them have a z-index BUT because they are on top
+of eachother in the flow in the styles.css they do not need a z-index specified BUT it would need to
+be higher than 0 if specified as everything on the website has a basic of z-index of 0  */
+.title-image {
+  width: 25%;
+  transform: rotate(25deg);
+  position: absolute;
+  right: 23%
+}
+
+/* Here we added a background color to the features section as you can not do it with a plain
+background
+
+We then changed the posiitoning to relative as this is something we want to stay in the flow of
+things, likewise with the title-image we didn't need to add a z-index as this sits on top based on
+the fact that the title-image has a position and is in the flow of things AND is below the title-image.
+
+MAKE SURE TO REFER TO THE LECTURE PDF IF YOU'RE CONFUSED BRANDON AS THIS WAS HARD! */
+/* Features Section */
+#features {
+  position: relative;
+}
+
+.feature-box {
+  padding: 5%;
+}
+
+.feature-title {
+  font-size: 1.25rem;
+}
+
+.icon {
+  color: #ef8172;
+  margin-bottom: 1rem;
+}
+
+/* Sudo classes are used to add hover, make sure to use : and add the hover to change what happens when your cursor hovers */
+.icon:hover {
+  color: #ff4c68;
+}
+
+/* Testimonial section */
+#testimonials {
+  background-color: #ef8172;
+}
+
+.testimonial-image {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+.testimonial-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+/* Press section */
+#press {
+  background-color: #ef8172;
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+.price-text {
+  font-size: 3rem;
+  line-height: 1.5;
+
+}
+/* Pricing section */
+/* Here, we just added some padding to make the pricing move away from the previous section
+and also aligned the text to the centre so it's unified with the website */
+#pricing {
+  padding: 100px;
+
+}
+
+/* Here, we added padding to each column within the rows so they where evenly spaced and
+uniformed within the website */
+.pricing-column {
+  padding: 3% 2%;
+}
+
+/* Call to action */
+
+/* Footer section  */
+
+.social-icon {
+  margin: 20px 10px;
+}
+
+/* So we essentially added a media query and targeted when the website started going into
+tablet view, once it hit tablet view, the image got distorted, so we had to add queries
+to make this image to show properly on the tablet/phone
+
+we added a position static so it didn't fly around the page and also rotated it so it looked aligned
+we also added text-align center. */
+@media (max-width: 1028px) {
+  #title {
+    text-align: center;
+  }
+
+  .title-image {
+    position: static;
+    transform: rotate(0);
+  }
+}
